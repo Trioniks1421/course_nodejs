@@ -4,3 +4,8 @@
 .course-form{
     padding-bottom: 1rem;
 }
+.card-action.actions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

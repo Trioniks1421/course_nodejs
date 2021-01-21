@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars')
 const homeRoutes =require('./routes/home')
 const addRoutes = require('./routes/add')
 const coursesRoutes =require('./routes/courses')
+const cart = require('./routes/cart')
 const User = require('./models/user')
 
 const hbs = exphbs.create({
@@ -30,6 +31,7 @@ app.use(express.urlencoded({extended:true}))
 app.use('/add',addRoutes)
 app.use('/',homeRoutes)
 app.use('/courses', coursesRoutes)
+app.use('/cart',cart)
 
 async function start(){
     try{    
